@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("*** MENU ***");
+		System.out.println("Enter 1 for sum:");
+		System.out.println("Enter 2 for diff:");
+		System.out.println("Enter 3 for product:");
+		System.out.println("Enter 4 for quotient:");
+		System.out.println("Enter 5 for rem:");
+		System.out.println("Now enter choice:");
+		
+		int ch = sc.nextInt();
+		
+		System.out.println("Enter Numbers:");
+		
+		int n1 = sc.nextInt();
+		int n2 = sc.nextInt();
+		switch(ch)
+		{
+		    case 1:
+		        {
+		            int sum= n1+n2;
+		            System.out.println("Answer:" + sum);
+		            break;
+		        }
+	
+	        case 2:
+		        {
+		            int diff= n1-n2;
+		            System.out.println("Answer:" + diff);
+		            break;
+		        }	 
+		        case 3:
+		        {
+		            int pro= n1*n2;
+		            System.out.println("Answer:" + pro);
+		            break;
+		        }
+		        case 4:
+		        {
+		            int quo= n1/n2;
+		            System.out.println("Answer:" + quo);
+		            break;
+		        }
+		        case 5:
+		        {
+		            int rem= n1%n2;
+		            System.out.println("Answer:" + rem);
+		            break;
+		        }
+		        default:
+		        {
+		            System.out.println("Wrong choice!!!");
+		        }
+		}
+	}
+}
