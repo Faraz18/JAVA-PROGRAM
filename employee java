@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+class employee
+{
+    int id, sal,ch,nsal;
+    String desig, name;
+    Scanner sc= new Scanner(System.in);
+    
+    void inc_sal()
+    {	
+        System.out.println("\n Enter Name:");
+        name= sc.next();
+        System.out.println("\n Enter id:");
+        id= sc.nextInt();
+        System.out.println("\n Enter Designation:");
+        desig= sc.next();
+        System.out.println("\n Enter Salary:");
+        sal= sc.nextInt();
+        
+        System.out.println("\n 1. Manager");
+		System.out.println("\n 2. General Manager");
+		System.out.println("\n 3. CEO");
+		System.out.println("\n 4. Worker");
+		
+		System.out.println("\n Enter choice:");
+		int ch= sc.nextInt();
+		
+		System.out.println("\n EMPLOYEE RECORD:");
+		System.out.println("\n Name :"+ name);
+		System.out.println("\n Id :"+ id);
+		System.out.println("\n Designation:"+ desig);
+		
+        switch(ch)
+        {
+            case 1:
+                {
+                    nsal = sal + 5000;
+                    System.out.println("\n  NEW SALARY="+ nsal);
+                    break;
+                }
+            case 2:
+                {
+                    nsal = sal + 10000;
+                    System.out.println("\n  NEW SALARY="+ nsal);
+                    break;
+                }
+            case 3:
+                {
+                    nsal = sal + 20000;
+                    System.out.println("\n  NEW SALARY="+ nsal);
+                    break;
+                }
+            case 4:
+                {
+                    nsal = sal + 2000;
+                    System.out.println("\n  NEW SALARY="+ nsal);
+                    break;
+                }
+            default:
+		        {
+		            System.out.println("Wrong choice!!!");
+		        }
+        }
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		employee e = new employee();
+		e.inc_sal();
+	}
+}
