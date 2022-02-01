@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+class student
+{
+    int r_no, marks1, marks2, marks3,p,t;
+    String name;
+    Scanner sc= new Scanner(System.in);
+    
+    void getdata()
+    {
+        System.out.println("Enter Name:");
+        name= sc.next();
+        System.out.println("Roll number:");
+        r_no= sc.nextInt();
+    }
+    
+    void setdata()
+    {
+        System.out.println("Enter Marks:");
+        marks1= sc.nextInt();
+        marks2= sc.nextInt();
+        marks3= sc.nextInt();
+        
+        t=marks1+marks2+marks3;
+        p= t/3;
+    }
+    
+    void display()
+    {
+        System.out.println("STUDENT RECORD IS:");
+        System.out.println("Name is:"+ name);
+        System.out.println("Roll no is:"+ r_no);
+        System.out.println("Marks 1:"+ marks1);
+        System.out.println("Marks 2:"+ marks2);
+        System.out.println("Marks 3:"+ marks3);
+        System.out.println("Percentage:"+ p +"%");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	   
+		student s = new student();
+		s.getdata();
+		s.setdata();
+		s.display();
+	}
+}
+
