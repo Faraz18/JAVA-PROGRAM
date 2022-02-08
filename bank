@@ -55,13 +55,33 @@ class bank
 public class Main
 {
 	public static void main(String[] args) {
-	   
+	    
+	    Scanner sc= new Scanner(System.in);
 		bank b = new bank();
 		b.getdata();
-		b.deposit();
-		b.display();
-		b.withdraw();
-		b.display();
-		
+		System.out.println("Press 1 for deposit:");
+		System.out.println("Press 2 for withdrawl:");
+		System.out.println("Enter choice:");
+		int ch= sc.nextInt();
+		switch(ch)
+		{
+		    case 1:
+		        {
+		              b.deposit();
+		              b.display();
+		              break;
+		        }
+		    case 2:
+		        {
+		              b.withdraw();
+		              b.display();
+		              break;
+		        }
+		    default:
+		    {
+		         System.out.println("WRONG CHOICE!!!");
+		    }
+		}
+	
 	}
 }
